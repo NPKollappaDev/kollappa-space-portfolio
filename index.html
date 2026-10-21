@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050611">
+  <meta name="description" content="Explore Kollappa's developer portfolio, projects, technical skills, and interactive 3D solar system.">
+
+  <title>NPKollappa | Mission Control</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/solar-system.css">
+</head>
+
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <a href="#home" class="logo" aria-label="NPKollappa home">Nᴘ᭄...❤..<span>★彡[𝐊𝐎𝐋𝐋𝐀𝐏𝐏𝐀]彡★☬༒꧂</span></a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="contact-btn">Let's Connect ↗</a>
+
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >☰</button>
+  </header>
+
+  <main id="home">
+
+    <!-- HOME: MISSION CONTROL -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="status">
+          <span class="status-dot"></span>
+          MISSION CONTROL <span class="status-line">/ 001</span>
+        </div>
+
+        <p class="eyebrow">WELCOME TO MY UNIVERSE</p>
+
+        <h1>
+          Ready for<br>
+          <span class="gradient-text">Launch.</span>
+        </h1>
+
+        <p class="hero-description">
+          Exploring the digital universe through code,
+          creativity, and curiosity. Every great idea starts
+          with a single launch.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#about" class="primary-btn">
+            Ignite &amp; Launch <span>↗</span>
+          </a>
+
+          <a href="#projects" class="secondary-btn">
+            Explore My Work <span>↓</span>
+          </a>
+        </div>
+
+        <div class="hero-footer">
+          <div class="scroll-indicator">
+            <span class="scroll-icon">↓</span>
+            <span>SCROLL TO EXPLORE</span>
+          </div>
+
+          <div class="coordinates">13.0827° N &nbsp; 80.2707° E</div>
+        </div>
+      </div>
+
+      <!-- DECORATIVE SOLAR ART -->
+      <div class="solar-art" aria-label="Decorative solar system">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="orbit orbit-four"></div>
+
+        <div class="sun">
+          <div class="sun-core"></div>
+        </div>
+
+        <div class="planet planet-one"></div>
+        <div class="planet planet-two"></div>
+        <div class="planet planet-three">
+          <div class="planet-ring"></div>
+        </div>
+        <div class="planet planet-four"></div>
+
+        <div class="space-label label-top">
+          <span>01 / ORIGIN</span>
+          <strong>Infinite Possibilities</strong>
+        </div>
+
+        <div class="space-label label-bottom">
+          <span>STATUS / ACTIVE</span>
+          <strong>Exploring the Unknown</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE THREE.JS SOLAR SYSTEM -->
+    <section class="solar-section" id="solar-explorer">
+      <p class="section-tag">06 — SOLAR EXPLORER</p>
+
+      <h2>
+        Explore the <span class="gradient-text">Universe.</span>
+      </h2>
+
+      <p class="solar-description">
+        Discover the planets in our solar system.
+        Drag to rotate the view and select a planet to explore.
+      </p>
+
+      <div id="solar-system"></div>
+
+      <p id="planet-info" aria-live="polite">
+        Welcome, explorer. Select a planet to begin.
+      </p>
+    </section>
+
+    <!-- PLANET NAVIGATION -->
+    <section class="planet-navigation" id="planet-navigation">
+      <p class="section-tag">```html
+<!-- 07 — MISSION DESTINATIONS -->
+<section class="planet-navigation-section" id="destinations">
+
+  <p class="section-tag">07 — MISSION DESTINATIONS</p>
+
+  <h2>
+    Choose Your <span class="gradient-text">Destination.</span>
+  </h2>
+
+  <p class="planet-navigation-description">
+    Explore my developer universe through seven celestial destinations.
+  </p>
+
+  <div class="planet-card-grid">
+
+    <!-- SUN -->
+    <a class="planet-card" href="#home">
+      <span class="planet-icon sun-icon"></span>
+      <h3>☀️ Sun</h3>
+      <p>Home — Welcome to my developer universe.</p>
+      <span class="planet-link">Launch →</span>
+    </a>
+    <!-- NEPTUNE -->
+    <a class="planet-card" href="#skills">
+      <span class="planet-icon neptune-icon"></span>
+      <h3>Neptune</h3>
+      <p>Skills — Discover my technical toolkit and technologies.</p>
+      <span class="planet-link">Explore →</span>
+    </a>
+
+    <!-- EARTH -->
+    <a class="planet-card" href="#projects">
+      <span class="planet-icon earth-icon"></span>
+      <h3>🌍 Earth</h3>
+      <p>Projects — Explore the applications I have developed.</p>
+      <span class="planet-link">Explore →</span>
+    </a>
+
+    <!-- MARS -->
+    <a class="planet-card" href="#education">
+      <span class="planet-icon mars-icon"></span>
+      <h3>🔴 Mars</h3>
+      <p>Education — Discover my academic journey.</p>
+      <span class="planet-link">Explore →</span>
+    </a>
+
+    <!-- JUPITER -->
+    <a class="planet-card" href="#soft-skills">
+      <span class="planet-icon jupiter-icon"></span>
+      <h3>🟠 Jupiter</h3>
+      <p>Soft Skills — Communication, teamwork, ownership, and excellence.</p>
+      <span class="planet-link">Explore →</span>
+    </a>
+
+    <!-- SATURN -->
+    <a class="planet-card" href="#contact">
+      <span class="planet-icon saturn-icon"></span>
+      <h3>🪐 Saturn</h3>
+      <p>Contact — Connect with me for professional opportunities.</p>
+      <span class="planet-link">Explore →</span>
+    </a>
+
+  </div>
+</section>
+```
+
+<!-- SOFT SKILLS DESTINATION -->
+<section class="next-section" id="soft-skills">
+
+  <p class="section-tag">08 — HUMAN SKILLS</p>
+
+  <h2>
+    Beyond the Code <span class="gradient-text">.</span>
+  </h2>
+
+  <p class="planet-navigation-description">
+    The professional qualities I bring to every project
+    and team.
+  </p>
+
+  <div class="planet-card-grid">
+
+    <div class="planet-card">
+      <span class="planet-icon earth-icon"></span>
+      <h3>Communication</h3>
+      <p>Strong communication and presentation skills.</p>
+    </div>
+
+    <div class="planet-card">
+      <span class="planet-icon mars-icon"></span>
+      <h3>Teamwork</h3>
+      <p>Effective teamwork and collaboration.</p>
+    </div>
+
+    <div class="planet-card">
+      <span class="planet-icon jupiter-icon"></span>
+      <h3>Independent Working</h3>
+      <p>Ability to work independently and complete tasks responsibly.</p>
+    </div>
+
+    <div class="planet-card">
+      <span class="planet-icon saturn-icon"></span>
+      <h3>Ownership</h3>
+      <p>A strong sense of ownership and accountability.</p>
+    </div>
+
+    <div class="planet-card">
+      <span class="planet-icon neptune-icon"></span>
+      <h3>Passion for Excellence</h3>
+      <p>Commitment to quality, continuous improvement,
+        and excellence in my work.</p>
+    </div>
+
+    <div class="planet-card">
+      <span class="planet-icon ☀️ Sun-icon"></span>
+      <h3>Logical Thinking</h3>
+      <p>Analyzing problems systematically and developing effective, logical solutions.</p>
+    </div>
+
+  </div>
+
+</section>
+    <p class="section-tag">01 — THE EXPLORER</p>
+    <h2>Hello, I'm <span class="gradient-text">Kollappa.</span></h2>
+
+    <p>
+      Java Backend Developer with 1+ years of professional experience in backend development, specializing in Java, Spring Boot, RESTful APIs, Hibernate, Spring Data JPA, and MySQL.
+      I have experience developing REST APIs, implementing CRUD operations, integrating databases, optimizing SQL queries, and testing APIs.
+      My project experience includes a Mortgage Loan Origination System and an API Rate Limiter amp; Authentication Gateway.
+      I am committed to writing clean, maintainable code, solving technical challenges, and continuously enhancing my technical expertise.
+      I am seeking opportunities as a Java Backend Developer or Software Engineer where I can contribute to business solutions, collaborate with experienced teams, and grow as a software professional.
+      I value collaboration, and continuous learning.
+
+    </p>
+
+    <a href="#skills" class="secondary-btn">Discover My Skills ↗</a>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="next-section skills-section" id="skills">
+    <p class="section-tag">02 — MY TOOLKIT</p>
+
+    <h2>Tools for the <span class="gradient-text">Journey.</span></h2>
+
+    <p class="skills-intro">
+      Technologies and development tools I use and continue to develop
+      my skills in.
+    </p>
+
+    <div class="skills-showcase">
+
+      <!-- JAVA SKILLS -->
+      <article class="skill-tile">
+        <span class="skill-icon">☕</span>
+        <h3>Core Java</h3>
+        <p>OOP, Collections, Exception Handling, Generics and Java 8 Streams</p>
+        <span class="skill-category">PROGRAMMING</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">🍃</span>
+        <h3>Spring Boot</h3>
+        <p>Building Java backend applications and services</p>
+        <span class="skill-category">FRAMEWORK</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">🔗</span>
+        <h3>Spring Data JPA</h3>
+        <p>Database access and repository-based data operations</p>
+        <span class="skill-category">DATA ACCESS</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">⚙️</span>
+        <h3>Hibernate</h3>
+        <p>Object-relational mapping and entity management</p>
+        <span class="skill-category">ORM</span>
+      </article>
+
+      <!-- DATABASE AND API SKILLS -->
+      <article class="skill-tile">
+        <span class="skill-icon">🗄️</span>
+        <h3>MySQL</h3>
+        <p>SQL queries, relational databases and data management</p>
+        <span class="skill-category">DATABASE</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">🌐</span>
+        <h3>RESTful APIs</h3>
+        <p>CRUD operations and application communication</p>
+        <span class="skill-category">API DEVELOPMENT</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">📮</span>
+        <h3>Postman</h3>
+        <p>Testing and validating REST API requests and responses</p>
+        <span class="skill-category">API TESTING</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">📘</span>
+        <h3>Swagger / OpenAPI</h3>
+        <p>API documentation and endpoint exploration</p>
+        <span class="skill-category">API DOCUMENTATION</span>
+      </article>
+
+      <!-- TESTING SKILLS -->
+      <article class="skill-tile">
+        <span class="skill-icon">🧪</span>
+        <h3>JUnit</h3>
+        <p>Writing and running Java unit tests</p>
+        <span class="skill-category">TESTING</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">🎯</span>
+        <h3>Mockito</h3>
+        <p>Mocking dependencies for unit testing</p>
+        <span class="skill-category">MOCK TESTING</span>
+      </article>
+
+      <!-- DEVELOPMENT TOOLS -->
+      <article class="skill-tile">
+        <span class="skill-icon">📦</span>
+        <h3>Maven</h3>
+        <p>Java project builds and dependency management</p>
+        <span class="skill-category">BUILD TOOL</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">🐙</span>
+        <h3>Git &amp; GitHub</h3>
+        <p>Version control and source code management</p>
+        <span class="skill-category">DEVELOPMENT TOOLS</span>
+      </article>
+
+      <!-- FRONTEND SKILLS -->
+      <article class="skill-tile">
+        <span class="skill-icon">🌐</span>
+        <h3>HTML5</h3>
+        <p>Web page structure and semantic markup</p>
+        <span class="skill-category">FRONTEND</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">🎨</span>
+        <h3>CSS3</h3>
+        <p>Responsive layouts, styling and animations</p>
+        <span class="skill-category">FRONTEND</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">⚡</span>
+        <h3>JavaScript</h3>
+        <p>Interactive web experiences and dynamic behavior</p>
+        <span class="skill-category">FRONTEND</span>
+      </article>
+
+      <article class="skill-tile">
+        <span class="skill-icon">💻</span>
+        <h3>VS Code</h3>
+        <p>Code editing and application development</p>
+        <span class="skill-category">DEVELOPMENT TOOLS</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="next-section" id="projects">
+    <p class="section-tag">03 — MISSION PROJECTS</p>
+
+    <h2>Things I've <span class="gradient-text">Built.</span></h2>
+
+    <p>
+      A selection of projects from my development journey,
+      demonstrating programming and application-building concepts.
+    </p>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <article class="project-card">
+        <span>PROJECT 01 / BACKEND</span>
+
+        <h3>Mortgage Loan Origination System</h3>
+
+        <p>
+          Developed a backend application for managing mortgage loan records and streamlining loan processing workflows. 
+          Implemented RESTful APIs and CRUD operations to manage loan data, borrower-name searches, loan status filtering, pagination, sorting, and EMI calculations. 
+          Integrated MySQL using Spring Data JPA and Hibernate, tested APIs using Swagger UI, and deployed the application using Render with a TiDB Cloud database.
+        </p>
+
+        <div class="project-tech">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>Spring Data JPA</span>
+          <span>Hibernate</span>
+          <span>MySQL</span>
+          <span>REST API</span>
+          <span>Maven</span>
+          <span>JUnit</span>
+          <span>Mockito</span>
+        </div>
+
+        <a
+          class="project-button"
+          href="https://github.com/NPKollappaDev/mortgage-los"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on GitHub ↗
+        </a>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project-card">
+        <span>PROJECT 02 / FRONTEND</span>
+
+        <h3>College Management System</h3>
+
+        <p>
+          -comprehensive system for college management, focusing on data organization and user interaction.
+          -Designed a web-based application for managing student data, courses, and faculty information.
+          -Enabled administrators to manage records easily and allowed students to view their grades, attendance, and schedules.
+          -Implemented user-defined roles for Administrator, Student, Faculty, and staff.
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <a
+          class="project-button"
+          href="https://github.com/NPKollappaDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore GitHub Profile ↗
+        </a>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project-card">
+        <span>PROJECT 03 / BACKEND</span>
+
+        <h3>API Rate Limiter & Authentication Gateway</h3>
+
+        <p>
+         Developed a centralized API gateway to handle authentication, request validation, and role-based authorization. 
+         Implemented Redis-backed token bucket rate limiting to control request traffic and prevent clients from exceeding configured request limits. 
+         Designed centralized access policies to improve API security and manage incoming requests efficiently.
+        </p>
+
+        <div class="project-tech">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>Redis</span>
+          <span>MySQL</span>
+        </div>
+
+        <a
+          class="project-button"
+          href="https://github.com/NPKollappaDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore GitHub Profile ↗
+        </a>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project-card">
+        <span>PROJECT 04 / BACKEND</span>
+
+        <h3>Gpay Roll</h3>
+
+        <p>
+          -An automated payroll service designed to relieve business owners of payroll management.
+          -Gpay roll is an easy-to-use, self- employed service.
+          -Our team strives to connect to employers and employees beyond just compensation.
+          -Working with Spring JDBC Template for persistent logic.
+        </p>
+
+        <div class="project-tech">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>MySQL</span>
+          <span>REST API</span>
+          <span>JDBC</span>
+          <span>Servlet</span>
+        </div>
+
+        <a
+          class="project-button"
+          href="https://github.com/NPKollappaDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore GitHub Profile ↗
+        </a>
+      </article>
+
+      <!-- PROJECT 05 -->
+      <article class="project-card">
+        <span>PROJECT 05 / WEB DEVELOPMENT</span>
+
+        <h3>🚗ParkMate!</h3>
+
+        <p>
+          I’m happy to share ParkMate a Role-Based Vehicle Parking Management System designed to simplify and digitize parking operations through a user-friendly interface and role-based access control.
+
+          ✨ Key Features:-
+          🅿️ Real-time parking slot availability monitoring
+          🚘 Vehicle entry and exit tracking
+          🔐 Role-based authentication and access control
+          👨‍💼 Admin: Manage parking slots and vehicle parking/unparking
+          🚦 Entry Gate Operator: Register incoming vehicles
+          🏁 Exit Gate Operator: Process vehicle exits and update parking status
+          👤 User: View and book available parking slots
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <a
+          class="project-button"
+          href="https://github.com/NPKollappaDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore GitHub Profile ↗
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="next-section" id="education">
+    <p class="section-tag">04 — KNOWLEDGE BASE</p>
+
+    <h2>My <span class="gradient-text">Education.</span></h2>
+
+    <article class="project-card">
+      <span>COMPUTER SCIENCE</span>
+      <h3>B.Tech — Computer Science and Engineering</h3>
+      <p>
+        Jawaharlal Nehru Technological University, Anantapur (JNTUA).
+      </p>
+    </article>
+  </section>
+  <!-- CONTACT -->
+  <section class="next-section" id="contact">
+    <p class="section-tag">
+<!-- CONTACT SECTION -->
+<section class="next-section contact-section" id="contact">
+  <p class="section-tag">05 — ESTABLISH CONTACT</p>
+
+  <h2>
+  Ready for the next <span class="gradient-text">Development challenge.</span>
+</h2>
+
+  <p>
+    Interested in connecting about software development, projects,
+    collaborations, or professional opportunities? Feel free to reach out!
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- LEFT: CONTACT DETAILS -->
+    <div class="contact-info">
+      <h3>Contact Details</h3>
+
+      <p>
+        I'm open to connecting with developers, recruiters, and professionals.
+        Let's discuss ideas and opportunities.
+      </p>
+
+      <div class="contact-methods">
+
+        <!-- PHONE -->
+        <a class="contact-item" href="tel:+918317444642">
+          <div class="contact-item-icon">☎</div>
+          <div>
+            <strong>Phone</strong>
+            <span>+91-8317444642</span>
+          </div>
+        </a>
+
+        <!-- EMAIL -->
+        <a
+          class="contact-item"
+          href="mailto:npkollappa547@gmail.com"
+        >
+          <div class="contact-item-icon">✉</div>
+          <div>
+            <strong>Email</strong>
+            <span>npkollappa547@gmail.com</span>
+          </div>
+        </a>
+
+        <!-- LINKEDIN -->
+        <a
+          class="contact-item"
+          href="https://www.linkedin.com/in/np-kollappa2002/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-item-icon">in</div>
+          <div>
+            <strong>LinkedIn</strong>
+            <span>Connect with me professionally ↗</span>
+          </div>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a
+          class="contact-item"
+          href="https://wa.me/918317444642"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-item-icon">☏</div>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>+91-8317444642 · Message me ↗</span>
+          </div>
+        </a>
+
+        <!-- GITHUB -->
+        <a
+          class="contact-item"
+          href="https://github.com/NPKollappaDev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact-item-icon">⌘</div>
+          <div>
+            <strong>GitHub</strong>
+            <span>Explore my projects ↗</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTACT MESSAGE -->
+    <div class="contact-form">
+      <h3>Let's Connect</h3>
+
+      <p>
+        Have a project idea, job opportunity, or question?
+        Choose your preferred contact method and get in touch.
+      </p>
+
+      <div class="contact-message-card">
+        <span class="section-label">OPEN TO OPPORTUNITIES</span>
+        <p>
+          I'm interested in Java Backend Developer and Software Engineer
+          opportunities, collaborating with teams, learning new technologies,
+          and building useful applications.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          href="mailto:npkollappa547@gmail.com?subject=Professional%20Opportunity"
+        >
+          Email Me ↗
+        </a>
+
+        <a
+          class="primary-btn"
+          href="https://wa.me/918317444642"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chat on WhatsApp ↗
+        </a>
+
+        <a
+          class="secondary-btn"
+          href="https://www.linkedin.com/in/np-kollappa2002/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Connect on LinkedIn ↗
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- END CONTACT SECTION -->
+  <!-- FOOTER -->
+  <footer>
+    <a href="#home" class="logo">𝓜𝓪𝓼𝓽𝓮𝓻𝓜𝓲𝓷𝓭_𝓚𝓸𝓵𝓵𝓪𝓹𝓹𝓪<span>.</span></a>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
+
+  <!-- HOMEPAGE JAVASCRIPT -->
+  <script src="js/main.js"></script>
+
+  <!-- THREE.JS SOLAR SYSTEM -->
+  <script type="module" src="js/solar-system.js"></script>
+</body>
+</html>

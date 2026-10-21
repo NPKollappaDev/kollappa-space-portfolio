@@ -1,0 +1,378 @@
+
+/* =========================================
+   KOLLAPPA SPACE PORTFOLIO
+   Interactive Solar System Styles
+   ========================================= */
+
+.solar-section {
+  position: relative;
+  padding: 100px 7%;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(39, 26, 91, 0.55) 0%,
+    #080916 55%,
+    #050611 100%
+  );
+}
+
+.solar-section .section-tag {
+  display: block;
+  margin-top: 0;
+  color: #69e8ff;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.solar-section h2 {
+  margin: 22px 0 16px;
+  color: #f4f4ff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.solar-description {
+  max-width: 580px;
+  margin: 0 auto;
+  color: #999ab7;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   THREE.JS SOLAR SYSTEM
+   ========================================= */
+
+#solar-system {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  max-width: 1200px;
+  margin: 35px auto 25px;
+  overflow: hidden;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 16px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(30, 25, 70, 0.25),
+    rgba(5, 6, 17, 0.95)
+  );
+  box-shadow:
+    0 0 50px rgba(100, 75, 200, 0.08),
+    inset 0 0 40px rgba(100, 75, 200, 0.05);
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+#solar-system canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+#solar-system:active {
+  cursor: grabbing;
+}
+
+/* Planet information panel */
+
+#planet-info {
+  display: inline-block;
+  max-width: 90%;
+  min-height: 44px;
+  margin: 0 auto;
+  padding: 14px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #c6c8e4;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   PLANET NAVIGATION SECTION
+   ========================================= */
+
+.planet-navigation {
+  position: relative;
+  padding: 90px 7%;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: radial-gradient(
+    ellipse at top,
+    rgba(39, 26, 91, 0.28),
+    #070815 65%
+  );
+}
+
+.planet-navigation .section-tag {
+  display: block;
+  margin: 0;
+  color: #69e8ff;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.planet-navigation h2 {
+  margin: 18px 0;
+  color: #f4f4ff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.planet-navigation-description {
+  max-width: 580px;
+  margin: 0 auto 38px;
+  color: #a5a7c5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Planet card grid */
+
+.planet-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual planet card */
+
+.planet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  min-width: 0;
+  min-height: 220px;
+  padding: 26px;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  color: #f4f4ff;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 16px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.planet-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(105, 232, 255, 0.65);
+  background: rgba(115, 100, 210, 0.09);
+  box-shadow: 0 15px 40px rgba(70, 60, 160, 0.14);
+}
+
+.planet-card:focus-visible {
+  outline: 2px solid #69e8ff;
+  outline-offset: 4px;
+}
+
+/* Planet icons */
+
+.planet-icon {
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  box-shadow:
+    inset -8px -5px 12px rgba(0, 0, 0, 0.35),
+    0 0 24px rgba(110, 130, 255, 0.15);
+}
+
+/* Earth */
+
+.earth-icon {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #7de5ff,
+    #2677dc 55%,
+    #12306e
+  );
+}
+
+/* Mars */
+
+.mars-icon {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffc29b,
+    #d95b42 60%,
+    #762d36
+  );
+}
+
+/* Jupiter */
+
+.jupiter-icon {
+  background: repeating-linear-gradient(
+    0deg,
+    #d5a878 0 7px,
+    #f1d7ad 7px 12px,
+    #a76e50 12px 16px
+  );
+}
+
+/* Saturn */
+
+.saturn-icon {
+  background: linear-gradient(135deg, #f6e0a4, #b99a5b);
+}
+
+.saturn-icon::after {
+  content: "";
+  position: absolute;
+  width: 62px;
+  height: 18px;
+  top: 12px;
+  left: -9px;
+  border: 3px solid #d5bd87;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+/* Neptune */
+
+.neptune-icon {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #83baff,
+    #2454ce 65%,
+    #15205c
+  );
+}
+
+/* Planet card text */
+
+.planet-card h3 {
+  margin: 0 0 8px;
+  color: #f4f4ff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.planet-card p {
+  margin: 0 0 20px;
+  color: #a5a7c5;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.planet-link {
+  margin-top: auto;
+  color: #81ddff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .solar-section {
+    padding: 80px 5%;
+  }
+
+  #solar-system {
+    height: 500px;
+  }
+
+  .planet-navigation {
+    padding: 80px 5%;
+  }
+
+  .planet-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .solar-section {
+    padding: 65px 5%;
+  }
+
+  .solar-section h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .solar-description {
+    font-size: 13px;
+  }
+
+  #solar-system {
+    height: 430px;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
+
+  #planet-info {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .planet-navigation {
+    padding: 65px 5%;
+  }
+
+  .planet-navigation h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .planet-navigation-description {
+    font-size: 13px;
+  }
+
+  .planet-card-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .planet-card {
+    min-height: 190px;
+    padding: 23px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .planet-card {
+    transition: none;
+  }
+
+  .planet-card:hover {
+    transform: none;
+  }
+
+  #solar-system {
+    scroll-behavior: auto;
+  }
+}
